@@ -1,0 +1,59 @@
+<section class="row justify-content-evenly">
+  <h2 class="text-center mt-4">{{title}}</h2>
+  <div class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 m-3 mb-3 mt-3 shadow-lg bg-body rounded"
+    *ngFor="let product of products">
+    <div class="card-img">
+      <img src="{{url+'get-image/'+product.imagen}}" alt="" *ngIf="product.imagen"
+        class="card-img-top rounded mx-auto d-block">
+    </div>
+    <div class="card-body " *ngIf="product.nombre">
+      <p class="card-title">{{product.nombre}}</p>
+      <p class="card-subtitle mb-2 text-muted">{{product.descripcion}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{'S/ '+product.precio.toFixed(2)}}</li>
+    </ul>
+    <div class="card-body">
+      <div class="container text-center">
+        <a [routerLink]="['/producto', product._id]" class="btn btn-dark m-1"><i class="bi bi-info-circle"></i> Ver
+          producto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--
+    public _id: string,
+      public principal:{
+        nombre: string,
+        descipcion: string,
+        categoria : string,
+        precio: number,
+        stock: number,
+        imagen: string
+      },
+      public general: {
+        color: string,
+        ram: number,
+        rom: number,
+        pantalla: number,
+        bateria: number,
+        camaraf: string,
+        camarap: string,
+        marca: string
+      },
+      public especifico: {
+        modelo: string,
+        tipopantalla: string,
+        tipoentrada: string,
+        sistemaoperativo: string,
+        procesador: string,
+        peso: number,
+        medidas: {
+          alto: number,
+          ancho: number,
+          profundidad: number
+        }
+      }
+-->

@@ -1,0 +1,41 @@
+
+/*Generales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+/*Footer*/
+footer{
+    height: 50px;
+}
+footer p{
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'yanone';
+}
+
+/*dando estilo al icono de subir */
+
+#iconsubir{
+	background: white;
+	bottom:55px;
+	display: block;
+	height: 45px;
+	position: fixed;
+	right:35px;
+	width:45px;
+    border-radius: 100%;
+    opacity: 1;
+    cursor: pointer;
+}
+#iconsubir img{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    margin: 0px auto;
+}
